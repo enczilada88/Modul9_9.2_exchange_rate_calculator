@@ -1,0 +1,32 @@
+<!DOCTYPE<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="title">Kalkulator walut</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='currency_exchange_style.css') }}">
+</head>
+<body>
+<h1 class="top"><u>Skorzystaj z naszego wirtualnego kalkulatora walut!</u></h1>
+     <img src="https://www.biznes-mentor.pl/wp-content/uploads/kantor-internetowy-750x450.jpg" alt="rich" width="700" height="400">
+    <h3 class="middle">W tym celu wybierz walutę, którą chciałbyś przeliczyć, a następnie wpisz ilość danej waluty:</h3>
+    <form method="post">
+    <label for="currency"></label>
+    <select name="currency" id="currency">
+        {% for money in money_list %}
+        <option>{{money}}</option>
+        {% endfor %}
+    </select>
+    <label for="amount"></label>
+    <input type="text" id="amount" name="amount">
+    <input type="submit" value="Przelicz!"><br><br>
+    </form>
+    {% if price %}
+    <p class="bottom">Koszt zakupu danej waluty to:</p>
+    <p class="price"><strong>{{price}} PLN</strong></p>
+    <img src="https://monophy.com/media/LP6nGPFyu6NH4wOroW/monophy.gif" alt="rich" width="358" height="232">
+
+    {% endif %}
+
+
+</body>
+</html>

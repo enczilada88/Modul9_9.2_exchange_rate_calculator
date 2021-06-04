@@ -1,0 +1,23 @@
+.top {
+    font-size: 60px;
+    color: black;
+    font-family: Georgia;
+    background: grey;
+}
+.middle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bottom {
+    font-weight: bold;
+    font-size: 20px;
+}
+.price {
+    color: red;
+    font-size: 25px;
+    font-family: Georgia:
+    background: grey;
+    border-style: dotted;
+    border-color: grey;
+}
